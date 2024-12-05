@@ -13,7 +13,7 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->decimal('price', 8, 2);
+            $table->float('price');
             $table->text('description');
             $table->string('photo');
             $table->boolean('availability')->default(true);
@@ -27,6 +27,51 @@ return new class extends Migration
                 'price' => 69.00,
                 'description' => 'A vízbú veszi ki a zoxigént',
                 'photo' => 'objektum.webp',
+                'availability' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Fheszek album',
+                'price' => 18.00,
+                'description' => 'Legjobb Kispesti lakotelep szovegek zenebe foglalva.',
+                'photo' => 'fheszek.jpg',
+                'availability' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Makoi tiesto',
+                'price' => 2.00,
+                'description' => '"Legjobb" hazai beatboxer, aki mosolyt csal az arcodra.',
+                'photo' => 'makoitiesto.webp',
+                'availability' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Killa Beez Album',
+                'price' => 12.00,
+                'description' => 'Amerikai real Wu-Tang shit.',
+                'photo' => 'killabee.jpg',
+                'availability' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Crips-es Csörike',
+                'price' => 17.00,
+                'description' => 'Minőségi grafikusok által előállitot stock fotó.',
+                'photo' => 'tweety.jpg',
+                'availability' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Ying Yang Twins',
+                'price' => 63.00,
+                'description' => 'Dirty South szövegek albumba',
+                'photo' => 'ying_yang_twins.jpg',
                 'availability' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),
